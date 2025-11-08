@@ -393,6 +393,30 @@ footer p a:hover {
 }
 
 /* ---------------------------------
+FEED DO INSTAGRAM
+--------------------------------- */
+.insta-feed {
+    background-color: var(--background); 
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.insta-feed h2 {
+    color: var(--primary); 
+}
+
+.insta-widget-container {
+    max-width: 900px; /* Limita a largura do widget, se necessário */
+    margin: 40px auto 40px auto; /* Centraliza o bloco */
+}
+
+.insta-cta {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* ---------------------------------
 ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
 --------------------------------- */
 @media (max-width: 768px) {
