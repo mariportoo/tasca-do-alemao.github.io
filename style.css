@@ -1,0 +1,178 @@
+/* Definição de Variáveis de Cores */
+:root {
+    --primary: #79220F; /* Vinho/Marrom Avermelhado */
+    --secondary: #D7B475; /* Ouro/Mostarda */
+    --text-dark: #382405; /* Texto Principal */
+    --accent-1: #8F4E26; /* Marrom Médio */
+    --accent-2: #582103; /* Marrom Escuro Header/Footer */
+    --background: #F8F8F8;
+    --light-text: white;
+}
+
+/* Base e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text-dark);
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif; /* Sugestão de fonte mais robusta */
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* HEADER & HERO SECTION */
+.hero-section {
+    background-color: var(--accent-2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 5%; /* Padding reduzido para a imagem de fundo ser o destaque */
+    min-height: 80vh;
+    color: var(--light-text);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Para visibilidade sobre a foto */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* Tamanho da logo */
+    height: 50px;
+    margin-right: 10px;
+    /* Estilo de borda para destacar a logo, se ela for redonda, por exemplo */
+    border-radius: 50%;
+    border: 3px solid var(--secondary);
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    color: var(--light-text);
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--light-text);
+}
+
+/* Ícones de Redes Sociais */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px; 
+    height: 30px;
+    border-radius: 5px; /* Para ícones de app */
+}
+
+/* HERO TEXT */
+.hero-text {
+    flex-grow: 1; /* Ocupa o centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary); /* Vinho/Vermelho */
+    color: var(--light-text);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--secondary);
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-1); 
+    border-color: var(--light-text);
+}
+
+/* 2. SECTION: SOBRE NÓS */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.sobre-nos {
+    background-color: white;
+}
+
+.historia-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ifood-description {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-top: 20px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 20px;
+    text-align: left;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--accent-2);
+    color: var(--secondary);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
