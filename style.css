@@ -396,19 +396,19 @@ footer p a:hover {
 FEED DO INSTAGRAM
 --------------------------------- */
 .insta-feed {
-    background-color: var(--background); 
+    background-color: #eadedd; 
     padding-top: 50px;
     padding-bottom: 80px;
 }
 
 .insta-feed h2 {
-    color: var(--primary); 
+    color: var(--text-dark); 
 }
 
 .embedsocial-hashtag {
     margin: 40px auto 40px auto; 
-    max-width: 900px; /* Limita a largura do feed */
-    text-align: center; /* Centraliza elementos internos (como o crédito) */
+    max-width: 900px;
+    text-align: center;
 }
 
 .insta-cta {
