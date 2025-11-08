@@ -405,9 +405,10 @@ FEED DO INSTAGRAM
     color: var(--primary); 
 }
 
-.insta-widget-container {
-    max-width: 900px; /* Limita a largura do widget, se necessário */
-    margin: 40px auto 40px auto; /* Centraliza o bloco */
+.embedsocial-hashtag {
+    margin: 40px auto 40px auto; 
+    max-width: 900px; /* Limita a largura do feed */
+    text-align: center; /* Centraliza elementos internos (como o crédito) */
 }
 
 .insta-cta {
