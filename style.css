@@ -73,6 +73,11 @@ h2 {
     margin: 0;
 }
 
+.main-nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
 .main-nav ul {
     list-style: none;
 }
@@ -310,6 +315,7 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
     .main-nav ul li {
         display: block;
         margin: 10px 0;
+        text-align: center;
     }
     
     .hero-main-content {
