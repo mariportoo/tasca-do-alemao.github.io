@@ -457,9 +457,24 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
         font-size: 1.2em;
     }
 
-    /* Footer */
-    footer p {
-        font-size: 0.8em;
+    /* FOOTER */
+    footer {
+        background-color: var(--accent-2);
+        color: var(--light-text);
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    footer p a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    footer p a:hover {
+        color: var(--light-text);
     }
 }
 
