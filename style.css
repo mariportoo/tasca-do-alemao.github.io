@@ -54,9 +54,31 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* NOVO: Botão Hamburger */
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001; /* Fica acima de tudo */
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary); /* Cor Dourada */
+    border-radius: 3px;
+}
+
 .logo {
     display: flex;
     align-items: center;
+    /* Centraliza o logo entre o hamburger e as redes sociais */
+    margin: 0 auto; 
 }
 
 .logo-img {
@@ -73,9 +95,27 @@ h2 {
     margin: 0;
 }
 
+/* ATUALIZADO: Menu Lateral */
 .main-nav {
-    flex-grow: 1;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largura do menu lateral */
+    height: 100%;
+    background-color: var(--accent-2); /* Cor de fundo escura */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Fica acima do site */
+    
+    /* Esconde o menu fora da tela */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    
+    padding-top: 60px; /* Espaço para o botão de fechar */
+}
+
+/* NOVO: Estado "Aberto" do Menu */
+.main-nav.is-open {
+    transform: translateX(0);
 }
 
 .main-nav ul {
@@ -83,8 +123,8 @@ h2 {
 }
 
 .main-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: block;
+    margin: 0;
 }
 
 .main-nav ul li a {
@@ -92,16 +132,36 @@ h2 {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    
+    /* Estilo dos links em bloco */
+    display: block;
+    padding: 20px 30px;
+    font-size: 1.2em;
 }
 
 .main-nav ul li a:hover {
     color: var(--light-text);
+    background-color: var(--accent-1);
+}
+
+/* NOVO: Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--secondary);
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Ícones de Redes Sociais */
 .social-links {
     display: flex;
     gap: 10px;
+    z-index: 1001; /* Garante que fiquem clicáveis */
 }
 
 .social-icon {
@@ -302,22 +362,17 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
 @media (max-width: 768px) {
 
     /* HEADER & HERO SECTION */
+    /* Não precisamos mais do flex-direction: column aqui */
     .header-content {
-        flex-direction: column;
-        gap: 20px;
+        gap: 15px; /* Ajusta o gap do mobile */
         margin-bottom: 20px;
     }
 
-    .main-nav ul {
-        padding: 0;
+    /* O logo não é mais absoluto, então precisa de ajuste */
+    .logo {
+        margin: 0 auto; /* Mantém o logo centralizado */
     }
 
-    .main-nav ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-    }
-    
     .hero-main-content {
         flex-direction: column;
         text-align: center;
@@ -416,9 +471,5 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
 
     .cta-button {
         font-size: 0.9em;
-    }
-
-    .main-nav ul li {
-        margin: 5px 0;
     }
 }

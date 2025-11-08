@@ -12,17 +12,17 @@
 <body>
     <header class="hero-section">
         <div class="header-content">
+            <button class="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="logo">
                 <img src="img/logo.png" alt="Logo Tasca do Alemão" class="logo-img">
                 <h1>Tasca do Alemão</h1>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#sobre">Nossa História</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+
             <div class="social-links">
                 <a href="https://www.ifood.com.br/delivery/rio-de-janeiro-rj/tasca-do-alemao-recreio-dos-bandeirantes/5bbb1897-87ae-4a1b-856a-bd5d401b2978"
                     target="_blank">
@@ -44,6 +44,15 @@
             <img src="img/hero-vertical.webp" alt="Apresentação de prato alemão vertical" class="hero-side-img">
         </div>
     </header>
+
+    <nav class="main-nav">
+        <button class="close-btn" aria-label="Fechar menu">&times;</button>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#sobre">Nossa História</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
     <section id="sobre" class="sobre-nos">
         <div class="container">
@@ -255,6 +264,27 @@
     <footer id="contato">
         <p>© 2025 Tasca do Alemão. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const hamburgerBtn = document.querySelector('.hamburger-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const navMenu = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.main-nav a');
+
+        function openMenu() {
+            navMenu.classList.add('is-open');
+        }
+
+        function closeMenu() {
+            navMenu.classList.remove('is-open');
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);        
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
 </body>
 
 </html>
