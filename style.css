@@ -36,7 +36,6 @@ h2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px 5%;
     min-height: 80vh;
     color: var(--light-text);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -46,12 +45,20 @@ h2 {
     justify-content: space-between;
 }
 
+/* NOVO: Cabeçalho Fixo */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 40px;
+    z-index: 999;
+    background-color: var(--accent-2);
+    padding: 20px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -182,6 +189,10 @@ h2 {
     margin: 0 auto;
     gap: 40px;
     padding-bottom: 80px;
+
+    margin-top: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .hero-text {
@@ -278,8 +289,7 @@ section h2 {
 .menu-category {
     margin-bottom: 50px;
     text-align: center;
-    
-    display: flex; 
+    display: flex;
     justify-content: center;
     flex-direction: column;
 }
@@ -293,10 +303,9 @@ section h2 {
     display: inline-block;
 }
 
-
 .menu-grid {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
 }
@@ -305,7 +314,7 @@ section h2 {
     background-color: var(--background);
     border: 1px solid #eee;
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
@@ -339,7 +348,7 @@ section h2 {
 .menu-item-card h4 {
     font-size: 1.3em;
     color: var(--text-dark);
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .menu-item-card .item-desc {
@@ -403,6 +412,9 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
         text-align: center;
         gap: 20px;
         padding-bottom: 40px;
+        margin-top: 100px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .hero-text {
@@ -444,6 +456,7 @@ ESTILOS DE RESPONSIVIDADE (MOBILE-FIRST)
     .menu-item-card {
         min-height: auto;
         padding: 15px;
+        width: 100%;
     }
 
     .item-header {
